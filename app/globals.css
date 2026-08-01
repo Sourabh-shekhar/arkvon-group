@@ -2,17 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-ink: 15 27 45;            /* #0F1B2D */
+  --color-paper: 247 245 240;       /* #F7F5F0 */
+  --color-charcoal: 28 31 38;       /* #1C1F26 */
+  --color-bronze: 176 141 87;       /* #B08D57 */
+  --color-bronze-light: 212 180 131;/* #D4B483 */
+  --color-slate: 91 100 114;        /* #5B6472 */
+}
+
+.dark {
+  --color-ink: 247 245 240;         /* flips: was near-black navy, now light */
+  --color-paper: 15 20 30;          /* dark background */
+  --color-charcoal: 240 237 230;    /* body text goes light */
+  --color-bronze: 212 180 131;      /* brighter bronze pops on dark */
+  --color-bronze-light: 224 195 150;
+  --color-slate: 148 158 172;       /* lighten so it stays legible on dark bg */
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #F7F5F0;
-  color: #1C1F26;
+  background-color: rgb(var(--color-paper));
+  color: rgb(var(--color-charcoal));
 }
 
 .node-line {
-  stroke: #B08D57;
+  stroke: rgb(var(--color-bronze));
   stroke-width: 1;
   opacity: 0.5;
 }
@@ -28,6 +46,6 @@ body {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #B08D57;
+  outline: 2px solid rgb(var(--color-bronze));
   outline-offset: 3px;
 }

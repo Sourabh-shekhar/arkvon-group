@@ -104,7 +104,6 @@ export default function Scene3D({ companies }) {
         <Stars radius={40} depth={30} count={1200} factor={2} fade speed={0.4} />
 
         <GroupCore />
-
         {companies.map((c, i) => (
           <group key={c.slug}>
             <OrbitRing radius={3.4 + i * 1.1} tilt={0.2 + i * 0.15} />

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    darkMode: 'class',
   content: [
     './app/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
@@ -7,12 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: '#0F1B2D',
-        paper: '#F7F5F0',
-        charcoal: '#1C1F26',
-        bronze: '#B08D57',
-        'bronze-light': '#D4B483',
-        slate: '#5B6472',
+        ink: 'rgb(var(--color-ink) / <alpha-value>)',
+        paper: 'rgb(var(--color-paper) / <alpha-value>)',
+        charcoal: 'rgb(var(--color-charcoal) / <alpha-value>)',
+        bronze: 'rgb(var(--color-bronze) / <alpha-value>)',
+        'bronze-light': 'rgb(var(--color-bronze-light) / <alpha-value>)',
+        slate: 'rgb(var(--color-slate) / <alpha-value>)',
       },
       fontFamily: {
         display: ['var(--font-display)'],

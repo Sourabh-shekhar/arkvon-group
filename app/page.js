@@ -2,19 +2,20 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { companies } from "../data/companies";
 import Image from "next/image";
+
 // Three.js needs the browser, so this loads only on the client, never
 // during the server-rendered build.
-const Scene3D = dynamic(() => import("../components/Scene3D"), {
+const HeroCarousel = dynamic(() => import("../components/HeroCarousel"), {
   ssr: false,
   loading: () => (
-    <div className="w-full h-[420px] sm:h-[540px] rounded-2xl bg-ink animate-pulse" />
+    <div className="w-full min-h-[540px] sm:min-h-[600px] bg-ink animate-pulse" />
   ),
 });
 
 export default function Home() {
   return (
     <>
-    <section className="max-w-6xl mx-auto px-6 pt-8">
+      <section className="max-w-6xl mx-auto px-6 pt-8">
         <Image
           src="/arkvon-banner.png"
           alt="Arkvon Group — rooted in India, ready for the world. Our subsidiary: AchaarYaar, authentic homemade Bihar pickles."
@@ -24,6 +25,7 @@ export default function Home() {
           priority
         />
       </section>
+
       <section className="max-w-6xl mx-auto px-6 pt-16 sm:pt-24 pb-8">
         <p className="text-bronze text-sm tracking-[0.2em] uppercase mb-4">
           A holding company
@@ -52,9 +54,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <Scene3D companies={companies} />
-      </section>
+      <HeroCarousel />
 
       <section className="bg-ink text-paper">
         <div className="max-w-6xl mx-auto px-6 py-20 grid sm:grid-cols-3 gap-10">
