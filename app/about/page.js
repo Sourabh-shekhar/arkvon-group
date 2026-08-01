@@ -1,3 +1,6 @@
+import Link from "next/link";
+import FadeIn from "../../components/FadeIn";
+
 export const metadata = { title: "About — Arkvon Group" };
 
 const values = [
@@ -28,66 +31,120 @@ const values = [
 export default function AboutPage() {
   return (
     <section className="max-w-3xl mx-auto px-6 py-16 sm:py-24">
-      <p className="text-bronze text-sm tracking-[0.2em] uppercase mb-4">
-        About
-      </p>
-      <h1 className="font-display text-4xl sm:text-5xl text-ink mb-4">
-        Rooted in India, ready for the world.
-      </h1>
-      <p className="text-slate text-lg leading-relaxed mb-16 max-w-xl">
-        Arkvon Group is a diversified group of ventures driven by trust,
-        innovation, and a commitment to create lasting value for a better
-        tomorrow.
-      </p>
-
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-20">
-        {values.map((v) => (
-          <div key={v.name} className="flex flex-col items-center text-center">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="w-10 h-10 text-bronze mb-3"
-            >
-              {v.icon}
-            </svg>
-            <p className="text-ink text-sm tracking-widest uppercase">
-              {v.name}
-            </p>
-          </div>
-        ))}
-      </div>
-
-      <div className="border-t border-charcoal/10 pt-12 mb-12">
+      <FadeIn>
         <p className="text-bronze text-sm tracking-[0.2em] uppercase mb-4">
-          Our Story
+          About
         </p>
-        <p className="text-charcoal leading-relaxed mb-6">
-          Arkvon Group was started with a simple belief: good businesses
-          deserve a structure that helps them grow, not just a name to
-          operate under. Rather than building one company and stopping
-          there, Arkvon Group exists to bring together independent ventures
-          that share a commitment to quality and long-term thinking — giving
-          each one the backing of a group while letting it run on its own
-          terms.
+        <h1 className="font-display text-4xl sm:text-5xl text-ink mb-4">
+          Rooted in India, ready for the world.
+        </h1>
+        <p className="text-slate text-lg leading-relaxed mb-16 max-w-xl">
+          Arkvon Group is a diversified group of ventures driven by trust,
+          innovation, and a commitment to create lasting value for a better
+          tomorrow.
         </p>
-        <p className="text-charcoal leading-relaxed">
-          <span className="font-medium text-ink">AchaarYaar</span> is the
-          first business under the Arkvon Group umbrella — proof of the
-          model in practice. As the group grows, more independent businesses
-          will join under the same principles: trust, craftsmanship, and
-          room to grow.
-        </p>
-      </div>
+      </FadeIn>
 
-      <div className="border-t border-charcoal/10 pt-12">
-        <p className="font-display text-xl text-ink italic">
-          One vision. Stronger together. Limitless possibilities.
-        </p>
-      </div>
+      <FadeIn>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-20">
+          {values.map((v) => (
+            <div key={v.name} className="flex flex-col items-center text-center">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-10 h-10 text-bronze mb-3"
+              >
+                {v.icon}
+              </svg>
+              <p className="text-ink text-sm tracking-widest uppercase">
+                {v.name}
+              </p>
+            </div>
+          ))}
+        </div>
+      </FadeIn>
+
+      <FadeIn>
+        <div className="border-t border-charcoal/10 pt-12 space-y-6">
+          <p className="text-charcoal leading-relaxed">
+            Arkvon Group is a forward-thinking business group committed to
+            creating brands and businesses that make a meaningful difference in
+            people&apos;s lives. Our journey is driven by the belief that every
+            successful venture begins with a clear purpose, a customer-first
+            approach, and an unwavering commitment to quality.
+          </p>
+          <p className="text-charcoal leading-relaxed">
+            We focus on identifying opportunities, building sustainable
+            business models, and delivering products and services that
+            customers can trust. Every venture under the Arkvon Group umbrella
+            is guided by the same values — integrity, innovation, excellence,
+            and long-term thinking.
+          </p>
+          <p className="text-charcoal leading-relaxed">
+            Our businesses are built to solve real-world challenges while
+            creating value for customers, employees, partners, and the
+            communities we serve. We believe that growth is not measured only
+            by financial success but also by the positive impact we create
+            through responsible business practices.
+          </p>
+          <p className="text-charcoal leading-relaxed">
+            As we continue to expand into new industries, our vision remains
+            unchanged: to build a diversified group of trusted brands known for
+            quality, reliability, and innovation. We are committed to
+            continuous improvement, embracing new ideas, and delivering
+            experiences that exceed expectations.
+          </p>
+          <p className="text-charcoal leading-relaxed">
+            At Arkvon Group, we are not just building businesses — we are
+            building lasting relationships, creating opportunities, and
+            shaping a future driven by purpose and progress.
+          </p>
+        </div>
+      </FadeIn>
+
+      <FadeIn>
+        <div className="border-t border-charcoal/10 pt-12 mt-12">
+          <p className="text-bronze text-sm tracking-[0.2em] uppercase mb-4">
+            Our First Venture
+          </p>
+          <p className="text-charcoal leading-relaxed">
+            <span className="font-medium text-ink">AchaarYaar</span> is the
+            first business under the Arkvon Group umbrella — proof of this
+            model in practice. As the group grows, more independent businesses
+            will join under the same principles.
+          </p>
+        </div>
+      </FadeIn>
+
+      <FadeIn>
+        <div className="border-t border-charcoal/10 pt-12 mt-12">
+          <p className="text-bronze text-sm tracking-[0.2em] uppercase mb-4">
+            Vision &amp; Mission
+          </p>
+          <p className="text-charcoal leading-relaxed mb-4">
+            Read more about what drives Arkvon Group forward — our long-term
+            vision and the principles that guide every business we build.
+          </p>
+          <Link
+            href="/vision-mission"
+            className="text-ink hover:text-bronze transition-colors text-sm font-medium"
+          >
+            Read our Vision &amp; Mission →
+          </Link>
+        </div>
+      </FadeIn>
+
+      <FadeIn>
+        <div className="border-t border-charcoal/10 pt-12 mt-12">
+          <p className="font-display text-xl text-ink italic">
+            One vision. Stronger together. Limitless possibilities.
+          </p>
+        </div>
+      </FadeIn>
     </section>
   );
 }

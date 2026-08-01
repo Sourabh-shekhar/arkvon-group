@@ -3,19 +3,28 @@
 import { useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
-
+import Image from "next/image";
 export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-paper/90 dark:bg-paper/90 backdrop-blur border-b border-charcoal/10 dark:border-charcoal/20">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-20">
-        <Link
+      <Link
           href="/"
-          className="font-display text-xl tracking-tight text-ink"
+          className="flex items-center gap-2"
           onClick={() => setOpen(false)}
         >
-          ARKVON <span className="text-bronze">GROUP</span>
+          <Image
+            src="/arkvon-logo-mark.png"
+            alt="Arkvon Group"
+            width={150}
+            height={500}
+            priority
+          />
+          {/* <span className="font-display text-xl tracking-tight text-ink">
+            ARKVON <span className="text-bronze">GROUP</span>
+          </span> */}
         </Link>
 
         {/* Desktop nav */}
