@@ -15,7 +15,7 @@ const HeroCarousel = dynamic(() => import("../components/HeroCarousel"), {
 export default function Home() {
   return (
     <>
-      <FadeIn>
+      {/* <FadeIn>
         <section className="max-w-6xl mx-auto px-6 pt-8">
           <Image
             src="/arkvon-banner.png"
@@ -26,7 +26,7 @@ export default function Home() {
             priority
           />
         </section>
-      </FadeIn>
+      </FadeIn> */}
 
       <FadeIn>
         <section className="max-w-6xl mx-auto px-6 pt-16 sm:pt-24 pb-8">

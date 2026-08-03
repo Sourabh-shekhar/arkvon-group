@@ -2,6 +2,7 @@ import { companies } from "../../../data/companies";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import FadeIn from "../../../components/FadeIn";
+import Image from "next/image";
 
 export function generateStaticParams() {
   return companies.map((c) => ({ slug: c.slug }));
@@ -23,7 +24,19 @@ export default function CompanyPage({ params }) {
       </Link>
 
       <FadeIn>
-        <p className="text-bronze text-sm tracking-[0.2em] uppercase mt-8 mb-4">
+        {company.logo && (
+          <div className="mt-8 mb-6">
+            <Image
+              src={company.logo}
+              alt={`${company.name} logo`}
+              width={120}
+              height={120}
+              className="rounded-md"
+            />
+          </div>
+        )}
+
+        <p className="text-bronze text-sm tracking-[0.2em] uppercase mb-4">
           {company.sector} · Est. {company.founded}
           {company.location ? ` · ${company.location}` : ""}
         </p>
