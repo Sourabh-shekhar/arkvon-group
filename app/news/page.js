@@ -1,7 +1,7 @@
 import Link from "next/link";
 // Confirm export name/shape against your real data/updates.js —
 // adjust field names below (date/title/description/link/category) if they differ.
-import { updates } from "../data/updates";
+import { updates } from "../../data/updates";
 
 export const metadata = {
     title: "News",
