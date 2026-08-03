@@ -2,7 +2,7 @@ export const updates = [
   {
     title: "AchaarYaar Launch",
     description: "Authentic homemade Bihar pickles from Bihar.",
-    date: "2026-08-02",
+    date: "2026-06-20",
     tag: "Launch",
     href: "/news/achaaryaar-launch",
   },
