@@ -1,4 +1,4 @@
-import { companies } from "./data/companies";
+import { companies } from "../data/companies";
 
 export default function sitemap() {
   const baseUrl = "https://www.arkvongroup.com";
