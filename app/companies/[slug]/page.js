@@ -25,15 +25,47 @@ export default function CompanyPage({ params }) {
       <FadeIn>
         <p className="text-bronze text-sm tracking-[0.2em] uppercase mt-8 mb-4">
           {company.sector} · Est. {company.founded}
+          {company.location ? ` · ${company.location}` : ""}
         </p>
         <h1 className="font-display text-4xl sm:text-5xl text-ink mb-6">
           {company.name}
         </h1>
         <p className="text-slate text-lg mb-10">{company.tagline}</p>
 
-        <p className="text-charcoal leading-relaxed mb-10">
+        <p className="text-charcoal leading-relaxed mb-12">
           {company.description}
         </p>
+
+        {company.highlights && company.highlights.length > 0 && (
+          <div className="border-t border-charcoal/10 pt-10 mb-12">
+            <p className="text-sm text-slate mb-6">What sets it apart</p>
+            <div className="grid sm:grid-cols-3 gap-8">
+              {company.highlights.map((h) => (
+                <div key={h.label}>
+                  <p className="font-display text-lg text-ink mb-2">
+                    {h.label}
+                  </p>
+                  <p className="text-sm text-slate leading-relaxed">
+                    {h.detail}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {company.registrations && company.registrations.length > 0 && (
+          <div className="flex flex-wrap gap-3 mb-12">
+            {company.registrations.map((r) => (
+              <span
+                key={r}
+                className="text-xs tracking-widest uppercase text-slate border border-charcoal/15 rounded-full px-4 py-2"
+              >
+                {r} Registered
+              </span>
+            ))}
+          </div>
+        )}
 
         <div className="border-t border-charcoal/10 pt-6 flex flex-wrap gap-x-10 gap-y-4">
           <div>

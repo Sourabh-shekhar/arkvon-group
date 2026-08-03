@@ -7,9 +7,25 @@ export const companies = [
     name: "AchaarYaar",
     sector: "Food & Beverage",
     founded: "2026",
-    tagline: "Homemade Bihar pickles, made in small batches.",
+    location: "Siwan, Bihar",
+    tagline: "Homemade Bihar pickles, made in small batches, no shortcuts.",
     description:
-      "AchaarYaar makes traditional pickles using recipes passed down through generations in Bihar. Every batch is prepared by hand with natural ingredients and no artificial preservatives, then packed and shipped across India. The brand is based in Siwan, Bihar, and is registered under MSME, GST, and FSSAI.",
+      "AchaarYaar makes traditional pickles the way they were always meant to be made — by hand, in small batches, using recipes passed down through generations in Bihar. No artificial preservatives, no mass-production shortcuts, just mustard oil, sun-dried spices, and the patience that real pickling asks for. Every jar is prepared, packed, and shipped from Siwan, Bihar, to homes across India.",
+    highlights: [
+      {
+        label: "Small batches",
+        detail: "Every batch is hand-prepared and sun-cured, never mass-produced on a line.",
+      },
+      {
+        label: "No shortcuts",
+        detail: "Mustard oil and traditional spice ratios — no artificial preservatives or fillers.",
+      },
+      {
+        label: "Registered & compliant",
+        detail: "Operating under MSME, GST, and FSSAI registration from day one.",
+      },
+    ],
+    registrations: ["MSME", "GST", "FSSAI"],
     email: "support@achaaryaar.com",
     website: "https://www.achaaryaar.com",
   },
