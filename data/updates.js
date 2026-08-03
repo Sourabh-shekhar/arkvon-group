@@ -1,13 +1,16 @@
-// Add a new entry here whenever there's real news to share.
-// Newest should go first.
-
 export const updates = [
   {
+    title: "AchaarYaar Launch",
+    description: "Authentic homemade Bihar pickles from Bihar.",
     date: "August 2026",
-    tag: "Milestone",
-    title: "AchaarYaar joins the Arkvon Group family",
-    description:
-      "Our first subsidiary is now live — authentic homemade Bihar pickles, shipping across India.",
-    href: "/companies/achaaryaar",
+    tag: "Launch",
+    href: "/news/achaaryaar-launch",
+  },
+  {
+    title: "Arkvon Group Founded",
+    description: "Building independent, purpose-driven businesses.",
+    date: "2026",
+    tag: "Company",
+    href: "/news/arkvon-group",
   },
 ];

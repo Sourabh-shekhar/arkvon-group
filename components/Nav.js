@@ -90,6 +90,9 @@ export default function Nav() {
                 <Link href="/vision-mission" className="block py-2.5 border-t border-charcoal/10 hover:text-bronze transition-colors">
                   Vision &amp; Mission
                 </Link>
+                <Link href="/leadership" className="block py-2.5 border-t border-charcoal/10 hover:text-bronze transition-colors">
+                  Leadership
+                </Link>
                 <Link href="/careers" className="block py-2.5 border-t border-charcoal/10 hover:text-bronze transition-colors">
                   Careers
                 </Link>
@@ -97,6 +100,9 @@ export default function Nav() {
             </div>
           </div>
 
+          <Link href="/news" className="hover:text-ink transition-colors">
+            News
+          </Link>
           <Link href="/careers" className="hover:text-ink transition-colors">
             Careers
           </Link>
@@ -119,19 +125,16 @@ export default function Nav() {
             aria-expanded={open}
           >
             <span
-              className={`block w-6 h-0.5 bg-ink transition-transform ${
-                open ? "rotate-45 translate-y-2" : ""
-              }`}
+              className={`block w-6 h-0.5 bg-ink transition-transform ${open ? "rotate-45 translate-y-2" : ""
+                }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-ink transition-opacity ${
-                open ? "opacity-0" : ""
-              }`}
+              className={`block w-6 h-0.5 bg-ink transition-opacity ${open ? "opacity-0" : ""
+                }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-ink transition-transform ${
-                open ? "-rotate-45 -translate-y-2" : ""
-              }`}
+              className={`block w-6 h-0.5 bg-ink transition-transform ${open ? "-rotate-45 -translate-y-2" : ""
+                }`}
             />
           </button>
         </div>
@@ -148,9 +151,8 @@ export default function Nav() {
             >
               Our Companies
               <span
-                className={`transition-transform ${
-                  mobileSection === "companies" ? "rotate-180" : ""
-                }`}
+                className={`transition-transform ${mobileSection === "companies" ? "rotate-180" : ""
+                  }`}
               >
                 ⌄
               </span>
@@ -182,9 +184,8 @@ export default function Nav() {
             >
               About
               <span
-                className={`transition-transform ${
-                  mobileSection === "about" ? "rotate-180" : ""
-                }`}
+                className={`transition-transform ${mobileSection === "about" ? "rotate-180" : ""
+                  }`}
               >
                 ⌄
               </span>
@@ -205,10 +206,24 @@ export default function Nav() {
                 >
                   Vision &amp; Mission
                 </Link>
+                <Link
+                  href="/leadership"
+                  className="block py-2 text-charcoal/70 hover:text-bronze transition-colors"
+                  onClick={() => setOpen(false)}
+                >
+                  Leadership
+                </Link>
               </div>
             )}
           </div>
 
+          <Link
+            href="/news"
+            className="py-3 border-b border-charcoal/10 hover:text-ink transition-colors"
+            onClick={() => setOpen(false)}
+          >
+            News
+          </Link>
           <Link
             href="/careers"
             className="py-3 border-b border-charcoal/10 hover:text-ink transition-colors"
