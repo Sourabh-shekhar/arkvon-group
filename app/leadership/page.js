@@ -12,7 +12,7 @@ const leaders = [
     name: "[Founder Name]",
     title: "Founder & CEO",
     bio: "[2–3 sentence bio — background, why you started Arkvon Group, relevant experience.]",
-    linkedin: "https://linkedin.com/in/your-profile",
+    linkedin: "https://www.linkedin.com/company/arkvongroup/",
     image: null, // "/leadership/founder.jpg" once you have a real photo
   },
 ];

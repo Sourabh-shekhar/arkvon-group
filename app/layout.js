@@ -41,7 +41,7 @@ const organizationSchema = {
   logo: "https://www.arkvongroup.com/arkvon-logo-mark.png",
   sameAs: [
     "https://www.instagram.com/achaaryaar",
-    "https://linkedin.com/company/arkvon-group" // update with your real URL
+    "https://www.linkedin.com/company/arkvongroup/" // update with your real URL
   ]
 };
 
