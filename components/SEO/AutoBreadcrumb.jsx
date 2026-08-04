@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import BreadcrumbSchema from "./BreadcrumbSchema";
+import BreadcrumbSchema from "./BreadcrumbSchema.jsx";
 
 export default function AutoBreadcrumb() {
   const pathname = usePathname();
