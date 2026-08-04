@@ -19,6 +19,13 @@ const body = Public_Sans({
 
 export const metadata = {
   metadataBase: new URL("https://www.arkvongroup.com"),
+
+  verification: {
+    other: {
+      "msvalidate.01": "334230573C4C8DACAC43164555C1CE71",
+    },
+  },
+
   title: {
     default: "Arkvon Group | Building Enduring Indian Businesses",
     template: "%s | Arkvon Group",
