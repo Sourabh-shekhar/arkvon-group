@@ -6,9 +6,10 @@
   --color-ink: 15 27 45;            /* #0F1B2D */
   --color-paper: 247 245 240;       /* #F7F5F0 */
   --color-charcoal: 28 31 38;       /* #1C1F26 */
-  --color-bronze: 176 141 87;       /* #B08D57 */
+  --color-bronze: 138 103 56;       /* #8A6738 — accessible on light backgrounds */
   --color-bronze-light: 212 180 131;/* #D4B483 */
   --color-slate: 91 100 114;        /* #5B6472 */
+  --color-bronze-dark: 138 103 56;  /* #8A6738 — for text on light backgrounds */
 }
 
 .dark {
@@ -18,6 +19,7 @@
   --color-bronze: 212 180 131;      /* brighter bronze pops on dark */
   --color-bronze-light: 224 195 150;
   --color-slate: 148 158 172;       /* lighten so it stays legible on dark bg */
+  --color-bronze-dark: 212 180 131; /* now on a dark bg — reuse the light-on-dark value */
 }
 
 html {
@@ -27,6 +29,9 @@ html {
 body {
   background-color: rgb(var(--color-paper));
   color: rgb(var(--color-charcoal));
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .node-line {
@@ -48,4 +53,15 @@ a:focus-visible,
 button:focus-visible {
   outline: 2px solid rgb(var(--color-bronze));
   outline-offset: 3px;
+}
+.marquee-track {
+  animation: marquee 28s linear infinite;
+  width: max-content;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
 }

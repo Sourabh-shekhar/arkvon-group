@@ -10,7 +10,18 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }) {
   const company = companies.find((c) => c.slug === params.slug);
-  return { title: company ? `${company.name} — Arkvon Group` : "Arkvon Group" };
+  if (!company) return { title: "Company Not Found" };
+
+  return {
+    title: `${company.name} | Arkvon Group`,
+    description: company.tagline,
+    alternates: { canonical: `/companies/${company.slug}` },
+    openGraph: {
+      title: `${company.name} | Arkvon Group`,
+      description: company.tagline,
+      images: company.logo ? [company.logo] : ["/arkvon-banner.png"],
+    },
+  };
 }
 
 export default function CompanyPage({ params }) {

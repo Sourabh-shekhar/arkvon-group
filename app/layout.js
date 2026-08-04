@@ -19,16 +19,30 @@ const body = Public_Sans({
 export const metadata = {
   metadataBase: new URL("https://www.arkvongroup.com"),
   title: {
-    default: "Arkvon Group — Rooted in India, Ready for the World",
+    default: "Arkvon Group | Building Enduring Indian Businesses",
     template: "%s | Arkvon Group",
   },
-  description:
-    "Arkvon Group is a diversified holding company building independent, purpose-driven businesses — starting with AchaarYaar, authentic Bihar pickles.",
+  description: "Arkvon Group builds and supports distinctive Indian businesses with long-term thinking, operating discipline, and local insight.",
+  keywords: ["Arkvon Group", "Indian business group", "Indian holding company", "AchaarYaar", "Bihar pickles", "purpose-driven businesses"],
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
   openGraph: {
-    title: "Arkvon Group",
-    description: "A holding company building trusted, independent businesses.",
+    title: "Arkvon Group | Building Enduring Indian Businesses",
+    description: "A long-term Indian business group building trusted, independent companies.",
     url: "https://www.arkvongroup.com",
     siteName: "Arkvon Group",
+    locale: "en_IN",
+    type: "website",
+    images: ["/arkvon-banner.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arkvon Group | Building Enduring Indian Businesses",
+    description: "A long-term Indian business group building trusted, independent companies.",
     images: ["/arkvon-banner.png"],
   },
 };
@@ -60,3 +74,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+

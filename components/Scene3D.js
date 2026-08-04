@@ -2,7 +2,8 @@
 
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Html, Stars, Trail } from "@react-three/drei";
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import * as THREE from "three";
 
 function GroupCore() {
@@ -37,9 +38,11 @@ function GroupCore() {
   );
 }
 
-function OrbitingSubsidiary({ label, radius = 3.4, speed = 0.35, tilt = 0.25 }) {
+function OrbitingSubsidiary({ label, href, radius = 3.4, speed = 0.35, tilt = 0.25 }) {
   const pivot = useRef();
   const nodeRef = useRef();
+  const router = useRouter();
+  const [hovered, setHovered] = useState(false);
 
   useFrame((state, delta) => {
     pivot.current.rotation.y += delta * speed;
@@ -49,22 +52,51 @@ function OrbitingSubsidiary({ label, radius = 3.4, speed = 0.35, tilt = 0.25 }) 
     }
   });
 
+  function handleClick(e) {
+    e.stopPropagation();
+    router.push(href);
+  }
+
+  function handlePointerOver(e) {
+    e.stopPropagation();
+    setHovered(true);
+    document.body.style.cursor = "pointer";
+  }
+
+  function handlePointerOut(e) {
+    e.stopPropagation();
+    setHovered(false);
+    document.body.style.cursor = "auto";
+  }
+
   return (
     <group ref={pivot} rotation={[tilt, 0, 0]}>
       <Trail width={1.5} length={5} color={"#B08D57"} attenuation={(t) => t * t}>
         <group ref={nodeRef} position={[radius, 0, 0]}>
-          <mesh>
+          <mesh
+            onClick={handleClick}
+            onPointerOver={handlePointerOver}
+            onPointerOut={handlePointerOut}
+            scale={hovered ? 1.25 : 1}
+          >
             <sphereGeometry args={[0.32, 32, 32]} />
             <meshStandardMaterial
               color="#D4B483"
               emissive="#B08D57"
-              emissiveIntensity={0.4}
+              emissiveIntensity={hovered ? 0.8 : 0.4}
               metalness={0.4}
               roughness={0.4}
             />
           </mesh>
-          <Html center distanceFactor={8} style={{ pointerEvents: "none" }}>
-            <div className="text-ink text-[11px] font-semibold bg-paper/90 px-2 py-1 rounded-full whitespace-nowrap shadow">
+          <Html center distanceFactor={8} style={{ pointerEvents: "auto" }}>
+            <div
+              onClick={handleClick}
+              onPointerOver={handlePointerOver}
+              onPointerOut={handlePointerOut}
+              className={`text-ink text-[11px] font-semibold bg-paper/90 px-2 py-1 rounded-full whitespace-nowrap shadow cursor-pointer transition-transform ${
+                hovered ? "scale-110" : ""
+              }`}
+            >
               {label}
             </div>
           </Html>
@@ -109,6 +141,7 @@ export default function Scene3D({ companies }) {
             <OrbitRing radius={3.4 + i * 1.1} tilt={0.2 + i * 0.15} />
             <OrbitingSubsidiary
               label={c.name}
+              href={`/companies/${c.slug}`}
               radius={3.4 + i * 1.1}
               speed={0.35 - i * 0.05}
               tilt={0.2 + i * 0.15}

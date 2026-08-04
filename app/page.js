@@ -31,28 +31,29 @@ export default function Home() {
       <FadeIn>
         <section className="max-w-6xl mx-auto px-6 pt-16 sm:pt-24 pb-8">
           <p className="text-bronze text-sm tracking-[0.2em] uppercase mb-4">
-            A holding company
+            An Indian business group
           </p>
           <h1 className="font-display text-4xl sm:text-6xl leading-[1.05] text-ink max-w-3xl">
-            One group, growing{" "}
-            <em className="not-italic text-bronze">one company at a time.</em>
+            Building businesses people{" "}
+            <em className="not-italic text-bronze">choose, trust, and remember.</em>
           </h1>
           <p className="text-slate text-lg mt-6 max-w-xl">
-            Arkvon Group holds and supports a portfolio of independent
-            businesses. Drag to rotate, scroll to zoom.
+            Arkvon Group builds and supports distinctive Indian businesses —
+            combining long-term thinking, operating discipline, and local
+            insight to create lasting value.
           </p>
           <div className="flex gap-4 mt-8">
             <Link
               href="/companies"
               className="bg-ink text-paper px-6 py-3 rounded-full text-sm hover:bg-bronze transition-colors"
             >
-              View our companies
+              Explore our companies
             </Link>
             <Link
               href="/about"
               className="border border-charcoal/20 px-6 py-3 rounded-full text-sm hover:border-bronze hover:text-bronze transition-colors"
             >
-              About the group
+              Our story
             </Link>
           </div>
         </section>
@@ -67,15 +68,15 @@ export default function Home() {
             <div className="flex items-end justify-between gap-6 mb-14 flex-wrap">
               <div>
                 <p className="text-bronze-light text-xs tracking-[0.2em] uppercase mb-3">
-                  Register of Holdings
+                  Our portfolio
                 </p>
                 <h2 className="font-display text-3xl sm:text-4xl">
-                  What the group holds
+                  Built with purpose. Positioned to grow.
                 </h2>
               </div>
               <p className="text-paper/60 text-sm max-w-sm">
-                Every entry here is a real, operating business — added when
-                it&rsquo;s ready, not to pad a portfolio page.
+                We partner strong ideas with patient capital, practical support,
+                and the freedom to become brands people genuinely value.
               </p>
             </div>
           </FadeIn>
@@ -102,7 +103,7 @@ export default function Home() {
                     </p>
                   </div>
                   <span className="hidden sm:block text-paper/50 text-sm pt-1 group-hover:text-bronze-light transition-colors">
-                    Visit →
+                    Discover →
                   </span>
                 </Link>
               </FadeIn>
@@ -118,10 +119,11 @@ export default function Home() {
                   In progress
                 </p>
                 <h3 className="font-display text-2xl sm:text-3xl mb-2 text-paper/40 italic">
-                  Next holding
+                  The next opportunity
                 </h3>
                 <p className="text-paper/40 text-sm max-w-md">
-                  We add to this register slowly and on purpose.
+                  We are building thoughtfully and will announce the next
+                  Arkvon business when it is ready to stand on its own.
                 </p>
               </div>
             </div>
@@ -133,10 +135,10 @@ export default function Home() {
       <section className="border-t border-charcoal/10">
         <div className="max-w-6xl mx-auto px-6 py-14 grid grid-cols-2 sm:grid-cols-4 gap-8">
           {[
-            { n: "2026", l: "Group founded" },
-            { n: String(companies.length).padStart(2, "0"), l: "Holdings, and counting" },
-            { n: "IN", l: "Rooted in India" },
-            { n: "∞", l: "Patience for the next one" },
+            { n: "2026", l: "Founded with a long-term view" },
+            { n: String(companies.length).padStart(2, "0"), l: "Active company in the group" },
+            { n: "IN", l: "Indian roots, global ambition" },
+            { n: "∞", l: "Built to endure" },
           ].map((item, i) => (
             <FadeIn key={item.l} delay={i * 0.05}>
               <div className="border-l border-charcoal/15 pl-5">
@@ -156,7 +158,7 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-6 py-20">
         <FadeIn>
           <p className="text-bronze text-sm tracking-[0.2em] uppercase mb-10">
-            Latest
+            From the newsroom
           </p>
         </FadeIn>
         <div className="grid sm:grid-cols-2 gap-8">
@@ -184,21 +186,21 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-20 grid sm:grid-cols-2 gap-12 items-start">
           <FadeIn>
             <p className="text-bronze text-sm tracking-[0.2em] uppercase mb-4">
-              About the Group
+              About Arkvon
             </p>
             <h2 className="font-display text-3xl text-ink mb-6">
-              Rooted in India, ready for the world
+              Building businesses that matter
             </h2>
             <p className="text-slate leading-relaxed max-w-md">
-              Arkvon Group holds and supports a small portfolio of
-              independent businesses. We don&rsquo;t chase volume — every
-              subsidiary is chosen, launched carefully, and given room to run
-              on its own.
+              Arkvon Group is building a portfolio of independent businesses
+              that solve real needs, respect their roots, and have the ambition
+              to compete on a larger stage. We provide strategic direction,
+              operational support, and the patience to grow well.
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
             <blockquote className="font-display italic text-2xl text-ink border-l-2 border-bronze pl-6 leading-snug">
-              &ldquo;One group, growing one company at a time.&rdquo;
+              &ldquo;The best businesses are built one principled decision at a time.&rdquo;
             </blockquote>
           </FadeIn>
         </div>

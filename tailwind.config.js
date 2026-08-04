@@ -13,6 +13,7 @@ module.exports = {
         charcoal: 'rgb(var(--color-charcoal) / <alpha-value>)',
         bronze: 'rgb(var(--color-bronze) / <alpha-value>)',
         'bronze-light': 'rgb(var(--color-bronze-light) / <alpha-value>)',
+        'bronze-dark': 'rgb(var(--color-bronze-dark) / <alpha-value>)',
         slate: 'rgb(var(--color-slate) / <alpha-value>)',
       },
       fontFamily: {

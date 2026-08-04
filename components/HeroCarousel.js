@@ -12,20 +12,20 @@ const SLIDES = [
   {
     id: `${flagship.slug}-founding`,
     kind: "card",
-    eyebrow: `Milestone · Est. ${flagship.founded}`,
-    title: `${flagship.name} joins the group`,
-    copy: flagship.tagline,
+    eyebrow: `Our first company · Est. ${flagship.founded}`,
+    title: `${flagship.name}: a taste of Bihar, made for modern homes`,
+    copy: "Small-batch pickles made with time-honoured recipes, carefully sourced ingredients, and no shortcuts.",
     href: `/companies/${flagship.slug}`,
-    cta: "Read the company profile",
+    cta: "Discover the company",
   },
   {
     id: "growth",
     kind: "card",
-    eyebrow: "The Ledger",
-    title: "One company today. Room for more.",
-    copy: "Arkvon Group would rather add a business a decade too slowly than a year too fast.",
+    eyebrow: "Looking ahead",
+    title: "A long-term home for ambitious businesses.",
+    copy: "We are creating a group of trusted brands — one considered decision, one meaningful business at a time.",
     href: "/companies",
-    cta: "See our companies",
+    cta: "Explore our companies",
   },
 ];
 
