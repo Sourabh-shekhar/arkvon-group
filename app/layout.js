@@ -3,9 +3,9 @@ import "./globals.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import AutoBreadcrumb from "@/components/SEO/AutoBreadcrumb";
 import Script from "next/script";
-
+import AutoBreadcrumb from "../components/SEO/AutoBreadcrumb";
+import CookieBanner from "../components/CookieBanner";
 const display = Fraunces({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -117,6 +117,7 @@ export default function RootLayout({ children }) {
   `}
         </Script>
         <GoogleAnalytics gaId="G-NBKVBDQNF0" />
+        <CookieBanner />
       </body>
     </html>
   );

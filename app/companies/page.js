@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { companies } from "../../data/companies";
 import FadeIn from "../../components/FadeIn";
-import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+
 
 export const metadata = {
   title: "Our Companies",
@@ -12,18 +12,7 @@ export const metadata = {
 export default function CompaniesPage() {
   return (
     <>
-    <BreadcrumbSchema
-  items={[
-    {
-      name: "Home",
-      url: "https://www.arkvongroup.com",
-    },
-    {
-      name: "Companies",
-      url: "https://www.arkvongroup.com/companies",
-    },
-  ]}
-/>
+   
     <section className="max-w-3xl mx-auto px-6 py-16 sm:py-24">
       <FadeIn>
         <p className="text-bronze text-sm tracking-[0.2em] uppercase mb-4">

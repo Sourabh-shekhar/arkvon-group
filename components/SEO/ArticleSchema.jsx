@@ -9,10 +9,10 @@ export default function ArticleSchema({ article }) {
     ],
     datePublished: article.date,
     dateModified: article.date,
-    author: {
-      "@type": "Organization",
-      name: article.author,
-    },
+  author: {
+  "@type": "Organization",
+  name: article.author || "Arkvon Group",
+},
     publisher: {
       "@type": "Organization",
       name: "Arkvon Group",

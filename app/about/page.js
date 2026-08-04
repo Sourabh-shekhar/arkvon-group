@@ -1,20 +1,8 @@
 import Link from "next/link";
 import FadeIn from "../../components/FadeIn";
-import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata = { title: "About — Arkvon Group" };
-<BreadcrumbSchema
-  items={[
-    {
-      name: "Home",
-      url: "https://www.arkvongroup.com",
-    },
-    {
-      name: "About",
-      url: "https://www.arkvongroup.com/about",
-    },
-  ]}
-/>
+
 const values = [
   {
     name: "Trust",
