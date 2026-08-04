@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { updates } from "../../../data/updates";
 import { companies } from "../../../data/companies";
 import FadeIn from "../../../components/FadeIn";
-import ArticleSchema from "@/components/SEO/ArticleSchema";
+import ArticleSchema from "../../../components/SEO/ArticleSchema";
 
 export async function generateStaticParams() {
     return updates.map((item) => ({
