@@ -3,6 +3,8 @@ import "./globals.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import AutoBreadcrumb from "@/components/SEO/AutoBreadcrumb";
+import Script from "next/script";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -67,6 +69,22 @@ const organizationSchema = {
   ]
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Arkvon Group",
+  url: "https://www.arkvongroup.com",
+
+  publisher: {
+    "@type": "Organization",
+    name: "Arkvon Group",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.arkvongroup.com/arkvon-logo-mark.png"
+    }
+  }
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
@@ -78,10 +96,27 @@ export default function RootLayout({ children }) {
           }}
         />
 
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
+          }}
+        />
+
+        <AutoBreadcrumb />
         <Nav />
         <main>{children}</main>
         <Footer />
-            <GoogleAnalytics gaId="G-NBKVBDQNF0" />
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xx6gv815mm");
+  `}
+        </Script>
+        <GoogleAnalytics gaId="G-NBKVBDQNF0" />
       </body>
     </html>
   );

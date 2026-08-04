@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { updates } from "../../../data/updates";
 import { companies } from "../../../data/companies";
 import FadeIn from "../../../components/FadeIn";
+import ArticleSchema from "@/components/SEO/ArticleSchema";
 
 export async function generateStaticParams() {
     return updates.map((item) => ({
@@ -46,7 +47,8 @@ export default function NewsArticle({ params }) {
                     className="w-full h-auto"
                 />
             </section>
-
+            
+             <ArticleSchema article={article} />
             <main className="max-w-3xl mx-auto px-6 py-16">
                 <FadeIn>
                     <Link href="/news" className="text-sm text-slate hover:text-bronze-dark">

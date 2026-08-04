@@ -4,6 +4,7 @@ import { companies } from "../data/companies";
 import Image from "next/image";
 import { updates } from "../data/updates";
 import FadeIn from "../components/FadeIn";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const HeroCarousel = dynamic(() => import("../components/HeroCarousel"), {
   ssr: false,
@@ -11,6 +12,8 @@ const HeroCarousel = dynamic(() => import("../components/HeroCarousel"), {
     <div className="w-full min-h-[540px] sm:min-h-[600px] bg-ink animate-pulse" />
   ),
 });
+
+
 
 export default function Home() {
   return (
@@ -27,6 +30,14 @@ export default function Home() {
           />
         </section>
       </FadeIn> */}
+      <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: "https://www.arkvongroup.com",
+          },
+        ]}
+      />
 
       <FadeIn>
         <section className="max-w-6xl mx-auto px-6 pt-16 sm:pt-24 pb-8">
