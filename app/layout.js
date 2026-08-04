@@ -2,6 +2,7 @@ import { Fraunces, Public_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -65,13 +66,17 @@ export default function RootLayout({ children }) {
       <body className="font-body">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
         />
+
         <Nav />
         <main>{children}</main>
         <Footer />
+
+        <GoogleAnalytics gaId="G-NBKVBDQNF0" />
       </body>
     </html>
   );
 }
-
