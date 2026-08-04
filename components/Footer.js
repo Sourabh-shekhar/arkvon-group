@@ -41,18 +41,18 @@ export default function Footer() {
     <footer className="bg-ink text-paper mt-24">
       <div className="max-w-6xl mx-auto px-6 py-16 grid sm:grid-cols-5 gap-10">
         <div className="sm:col-span-1">
-       <Link href="/" className="inline-block mb-4">
+       <Link href="/" className="inline-block mb-5">
   <Image
     src="/arkvon-logo-mark.png"
     alt="Arkvon Group"
-    width={190}
-    height={60}
-    className="h-12 w-auto"
-    priority={false}
+    width={260}
+    height={70}
+    className="h-20 w-auto"
+    priority
   />
 </Link>
           <p className="text-paper/60 text-sm leading-relaxed">
-            Rooted in India, ready for the world.
+            Rooted in India, Ready for the world.
           </p>
           <div className="flex gap-4 mt-6">
             {socials.map((s) => (
